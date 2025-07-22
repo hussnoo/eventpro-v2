@@ -1,1 +1,1 @@
-# travel-assistant
+# eventpro-v2
