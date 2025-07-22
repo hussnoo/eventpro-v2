@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventPro-id</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>EventPro-id</h1>
+        <p>Your Smart Event Vendor Recommendation System</p>
+    </header>
+    <main>
+        <div class="container">
+            <div class="search-container">
+                <h2>Cari Vendor</h2>
+                <form id="search-form">
+                    <div class="form-group">
+                        <label for="event-type">Jenis Acara</label>
+                        <select id="event-type" name="event-type">
+                            <option value="pernikahan">Pernikahan</option>
+                            <option value="ulang_tahun">Ulang Tahun</option>
+                            <option value="seminar">Seminar</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Lokasi</label>
+                        <input type="text" id="location" name="location" placeholder="contoh: Jakarta">
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Anggaran (IDR)</label>
+                        <input type="number" id="budget" name="budget" placeholder="contoh: 10000000">
+                    </div>
+                    <div class="form-group">
+                        <label for="event-date">Tanggal Acara</label>
+                        <input type="text" id="event-date" name="event-date" placeholder="Pilih Tanggal">
+                    </div>
+                    <button type="submit">Cari</button>
+                </form>
+            </div>
+            <div class="results-container">
+                <div id="summary" class="summary-container">
+                    <h3>Ringkasan Anggaran</h3>
+                    <div id="budget-summary"></div>
+                </div>
+                <div id="map" class="map-container"></div>
+                <div id="vendor-list" class="vendor-list-container">
+                    <h2>Rekomendasi Vendor</h2>
+                    <div id="vendors"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 EventPro-id</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="app.js"></script>
+</body>
+</html>
